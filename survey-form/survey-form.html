@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="survey-form.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Programmer Form</h1>
+        <p id="description">description</p>
+    </header>
+    <main class=center-box>
+        <div class="container">
+            <form id="survey-form">
+                <label for="name" id="name-label">Name</label><br>
+                <input type="text" id="name" required placeholder="Enter your name"><br><br>
+
+                <label for="email" id="email-label">Email</label><br>
+                <input type="email" id="email" required placeholder="Enter your email"><br><br>
+
+                <label for="number" id="number-label">Age</label><br>
+                <input type="number" id="number" min="12" max="99" required placeholder="Enter your age"><br><br>
+
+                <section class="radio-right">
+                    <p>Do you consider yourself a programmer:</p>
+                    <label>
+                        <input id="newbie" type="radio" name="survey" value="newbie">
+                        Newbie</label>
+
+                    <input id="junior" type="radio" name="survey" value="junior">
+                    <label for="junior">Junior</label><br>
+
+                    <input id="middle" type="radio" name="survey" value="middle">
+                    <label for="middle">Middle</label>
+
+                    <input id="master" type="radio" name="survey" value="master">
+                    <label for="master">Master</label>
+                </section><br>
+
+
+                <label for="dropdown">Which option best describes your current role?</label><br>
+                <select id="dropdown">
+                    <option value="volvo">Hard</option>
+                    <option value="saab">Boring</option>
+                    <option value="opel">Satisfy</option>
+                    <option value="audi">Awesome</option>
+                </select><br><br>
+
+
+                <div class="check-adj">
+                    <p>
+                        What kind of project do you like to do the most?
+                        <span class="clue">(Check all that apply)</span>
+                    </p>
+
+                    <label>
+                        <input name="prefer" value="front-end-projects" type="checkbox"
+                            class="input-checkbox" />Front-end Projects
+                    </label>
+                    <label>
+                        <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Back-end
+                        Projects
+                    </label>
+                    <label>
+                        <input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Data
+                        Visualization
+                    </label>
+                    <label>
+                        <input name="prefer" value="database-projects" type="checkbox" class="input-checkbox" />Database
+                        Projects
+                    </label>
+                    <label>
+                        <input name="prefer" value="open-source-projects" type="checkbox" class="input-checkbox" />Open
+                        Source Projects
+                    </label>
+
+
+                </div>
+
+                <div class="textbox">
+                    <p>Any comments about your skills?</p>
+                    <textarea id="comments" class="text-adj" name="comment"
+                        placeholder="Enter your comment here..."></textarea>
+                </div><br><br>
+
+                <button type="submit" id="submit">Submit</button><br>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
