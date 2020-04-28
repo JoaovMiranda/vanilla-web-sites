@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+        <div class="container">
+
+            <h1 style="color: white;"> Task Master </h1>
+
+            <label for="title">Add your title</label><br>
+            <input type="text" name="title" placeholder="Seu titulo" id="newTitle"><br>
+
+            <label for="text">Add your task</label><br>
+            <textarea name="text" id="newTask" placeholder="seu conteudo" cols="30" rows="10"></textarea><br>
+
+            <!-- <input type="text" name="text" placeholder="seu conteudo" id="newTask"> -->
+            <button onclick="newTask()" id="addButton">create</button>
+        </div>
+
+    
+    <div id="list">
+
+    </div>
+
+
+    <script src="../js/task.js"></script>
+    <script src="../js/todo.js"></script>
+
+</body>
+
+</html>
