@@ -1,3 +1,5 @@
+let myStorage = window.localStorage;
+
 let tasks = [];
 
 function idgenerator() {
@@ -11,20 +13,20 @@ function idgenerator() {
     return id;
 }
 
-
 function createTask(taskDescription, titleDescription) {
-   
+
     let task = {
         id: idgenerator(),
         data: {
-            description: taskDescription
+            title: titleDescription,
+            description: taskDescription,
+            
         },
-        title: titleDescription,
+
     }
 
-
     tasks.push(task);
-    updateScreen();
+    myStorage.setItem("tasks", JSON.stringify(tasks));
 
 };
 
@@ -33,5 +35,15 @@ function createTask(taskDescription, titleDescription) {
 function deleteTask(id) {
 
     tasks = tasks.filter(task => task.id != id);
-    updateScreen();
+    myStorage.setItem("tasks", JSON.stringify(tasks));
+
+    // updateScreen();
+}
+
+function loadTasks() {
+    let tasks_str = myStorage.getItem("tasks");
+
+    if (tasks_str) {
+        tasks = JSON.parse(tasks_str);
+    }
 }

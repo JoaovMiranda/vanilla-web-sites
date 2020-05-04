@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 style="color: white;" align="center"> Task Master </h1>
+
+        <p>03 de maio de 2020</p>
+
+        
+        <input type="text" name="title" placeholder=" TITLE" required id="newTitle">
+
+        <textarea name="text" id="newTask" placeholder="DESCRIPTION" required cols="30" rows="10"></textarea>
+
+        <button onclick="newTask()" id="addButton">CREATE</button>
+
+    </div>
+
+    <div id="list">
+
+
+    </div>
+
+    <script src="../js/taskstorage.js"></script>
+    <script src="../js/todo.js"></script>
+
+</body>
+
+</html>
